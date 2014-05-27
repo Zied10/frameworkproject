@@ -5,7 +5,7 @@ describe "Static pages" do
   describe "Home page" do
 
     it "should have the content 'Assistant'" do
-      visit '/static_pages/home'
+      visit root_path
       expect(page).to have_content('Assistant')
     end
   end
@@ -13,7 +13,7 @@ describe "Static pages" do
 describe "Help page" do
 
     it "should have the content 'Help'" do
-      visit '/static_pages/help'
+      visit help_path
       expect(page).to have_content('Help')
     end
   end
