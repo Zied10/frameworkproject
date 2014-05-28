@@ -60,10 +60,9 @@ describe "User pages" do
       end
       describe "after saving the user" do
         before { click_button submit }
-        let(:user) { User.find_by(email: 'user@example.com') }
+        let(:user) { User.find_by(name: 'user@example.com') }
 
         it { should have_link('Deconnxeion') }
-        it { should have_title(user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Bienvenue') }
       end
     end
