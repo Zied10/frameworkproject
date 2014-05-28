@@ -1,0 +1,19 @@
+<% provide(:title, "Connexion") %>
+<h1>Connexion</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Connexion", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <p>Pas encore inscrit? <%= link_to "Inscrivez-vous maintenant!", signup_path %></p>
+  </div>
+</div>
