@@ -1,0 +1,8 @@
+<li>
+  <span class="title"><%= anecdote.title %></span>
+  <span class="text"><%= anecdote.text %></span>
+  <span class="scene_id"><%= anecdote.scene_id %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(anecdote.created_at) %> ago.
+  </span>
+</li>

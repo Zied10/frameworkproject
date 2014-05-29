@@ -1,2 +1,23 @@
 <% provide(:title, @user.name) %>
+<div class="row">
 <h1><%= @user.name %></h1>
+<div class="span8">
+    <% if @user.persones.any? %>
+      <h3>Persones (<%= @user.persones.count %>)</h3>
+      <ol class="persones">
+        <%= render @persones %>
+      </ol>
+    <% end %>
+  </div>
+</div>
+
+<div class="span8">
+    <% if @user.anecdotes.any? %>
+      <h3>Anecdotes (<%= @user.anecdotes.count %>)</h3>
+      <ol class="anecdotes">
+        <%= render @anecdotes %>
+      </ol>
+      <%= will_paginate @anecdotes %>
+    <% end %>
+  </div>
+</div>

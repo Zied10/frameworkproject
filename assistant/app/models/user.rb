@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :persones, dependent: :destroy
+  has_many :anecdotes, dependent: :destroy
   before_save { self.name = name.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }

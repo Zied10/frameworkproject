@@ -1,0 +1,9 @@
+class Chapitre < ActiveRecord::Base
+  belongs_to :user
+  has_many :scene
+  has_many :anecdote
+  validates :user_id, presence: true
+  validates :number, presence: true
+  validates :title, presence: true
+  
+end

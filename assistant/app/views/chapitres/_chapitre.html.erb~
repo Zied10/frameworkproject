@@ -1,0 +1,7 @@
+<li>
+  Numero :<span class="number"><%= chapitre.number %></span>
+Titre : <span class="title"><%= chapitre.title %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(chapitre.created_at) %> ago.
+  </span>
+</li>

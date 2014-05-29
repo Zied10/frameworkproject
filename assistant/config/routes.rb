@@ -1,6 +1,10 @@
 Assistant::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :persones, only: [:create, :destroy]
+  resources :anecdotes, only: [:create, :destroy]
+  resources :chapitres, only: [:create, :destroy]
+  resources :scenes, only: [:create, :destroy]
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'

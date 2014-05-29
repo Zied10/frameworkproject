@@ -1,0 +1,9 @@
+class Anecdote < ActiveRecord::Base
+  belongs_to :user
+  has_many :scene
+  validates :user_id, presence: true
+  validates :title, presence: true
+  validates :text, presence: true
+  validates :scene_id, presence: true
+
+end
